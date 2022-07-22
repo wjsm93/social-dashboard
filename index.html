@@ -1,0 +1,318 @@
+<html>
+    <head>
+        <!-- Page title -->
+        <title>Social Media Dashboard</title>
+
+        <!-- Set viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Import favicon -->
+        <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+
+        <!-- Add Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- Import CSS -->
+        <link rel="stylesheet" href="css/styles.css">
+
+        <!-- Import JS -->
+        <script type="text/javascript" src="js/index.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+
+    <body>
+        <!-- Main container -->
+        <div class="main">
+            <!-- header -->
+            <header>
+                <div class="header-top">
+                    <div class="display-flex align-items-center">
+                        <div class="application-title">
+                            <h1>Social Media Dashboard</h1>
+                            <span class="subtitle">Total Followers: 23,004</span>
+                        </div>
+                        <!-- Dark mode toggle -->
+                        <div class="header-actions display-flex align-items-center justify-end">
+                            <span class="subtitle toggle-label">Dark Mode</span>
+                            <div class="toggle"></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- content -->
+            <div class="content">
+                <div class="grid">
+                    <!-- Social card -->
+                    <div class="card social facebook" onclick="toggleModal()">
+                        <div class="social-user display-flex align-items-center justify-center">
+                            <img src="img/icon-facebook.svg"> <span class="subtitle">@nathanf</span>
+                        </div>
+                        <div class="social-total-follow">
+                            1987
+                        </div>
+                        <div class="social-follow-title">
+                            Followers
+                        </div>
+                        <div class="mt-30 indicator good">
+                            <img src="img/icon-up.svg"> 12 Today
+                        </div>
+                    </div>
+
+                    <!-- Social card -->
+                    <div class="card social twitter" onclick="toggleModal()">
+                        <div class="social-user display-flex align-items-center justify-center">
+                            <img src="img/icon-twitter.svg"> <span class="subtitle">@nathanf</span>
+                        </div>
+                        <div class="social-total-follow">
+                            1044
+                        </div>
+                        <div class="social-follow-title">
+                            Followers
+                        </div>
+                        <div class="mt-30 indicator good">
+                            <img src="img/icon-up.svg"> 99 Today
+                        </div>
+                    </div>
+
+                    <!-- Social card -->
+                    <div class="card social instagram" onclick="toggleModal()">
+                        <div class="social-user display-flex align-items-center justify-center">
+                            <img src="img/icon-instagram.svg"> <span class="subtitle">@realnathanf</span>
+                        </div>
+                        <div class="social-total-follow">
+                            11k
+                        </div>
+                        <div class="social-follow-title">
+                            Followers
+                        </div>
+                        <div class="mt-30 indicator good">
+                            <img src="img/icon-up.svg"> 1099 Today
+                        </div>
+                    </div>
+
+                    <!-- Social card -->
+                    <div class="card social youtube" onclick="toggleModal()">
+                        <div class="social-user display-flex align-items-center justify-center">
+                            <img src="img/icon-youtube.svg"> <span class="subtitle">Nathan F.</span>
+                        </div>
+                        <div class="social-total-follow">
+                            8239
+                        </div>
+                        <div class="social-follow-title">
+                            Subscribers
+                        </div>
+                        <div class="mt-30 indicator bad">
+                            <img src="img/icon-down.svg"> 144 Today
+                        </div>
+                    </div>
+                </div>
+
+                <section class="overview">
+                    <h2 class="section-title">Overview - Today</h2>
+
+                    <div class="grid">
+                        <!-- Card social count -->
+                        <div class="card" onclick="toggleModal()">
+                            <div class="display-flex align-items-center justify-between">
+                                <span class="subtitle">Page Views</span>
+                                <img src="img/icon-facebook.svg">
+                            </div>
+                            <div class="display-flex justify-between align-items-bottom mt-30">
+                                <div class="social-total-interaction">
+                                    87
+                                </div>
+                                <div class="indicator good">
+                                    <img src="img/icon-up.svg"> 3%
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Card social count -->
+                        <div class="card" onclick="toggleModal()">
+                            <div class="display-flex align-items-center justify-between">
+                                <span class="subtitle">Likes</span>
+                                <img src="img/icon-facebook.svg">
+                            </div>
+                            <div class="display-flex justify-between align-items-bottom mt-30">
+                                <div class="social-total-interaction">
+                                    52
+                                </div>
+                                <div class="indicator bad">
+                                    <img src="img/icon-down.svg"> 2%
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Card social count -->
+                        <div class="card" onclick="toggleModal()">
+                            <div class="display-flex align-items-center justify-between">
+                                <span class="subtitle">Likes</span>
+                                <img src="img/icon-instagram.svg">
+                            </div>
+                            <div class="display-flex justify-between align-items-bottom mt-30">
+                                <div class="social-total-interaction">
+                                    5462
+                                </div>
+                                <div class="indicator good">
+                                    <img src="img/icon-up.svg"> 2257%
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Card social count -->
+                        <div class="card" onclick="toggleModal()">
+                            <div class="display-flex align-items-center justify-between">
+                                <span class="subtitle">Profile Views</span>
+                                <img src="img/icon-instagram.svg">
+                            </div>
+                            <div class="display-flex justify-between align-items-bottom mt-30">
+                                <div class="social-total-interaction">
+                                    52k
+                                </div>
+                                <div class="indicator good">
+                                    <img src="img/icon-up.svg"> 1375%
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Card social count -->
+                        <div class="card" onclick="toggleModal()">
+                            <div class="display-flex align-items-center justify-between">
+                                <span class="subtitle">Retweets</span>
+                                <img src="img/icon-twitter.svg">
+                            </div>
+                            <div class="display-flex justify-between align-items-bottom mt-30">
+                                <div class="social-total-interaction">
+                                    117
+                                </div>
+                                <div class="indicator good">
+                                    <img src="img/icon-up.svg"> 303%
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Card social count -->
+                        <div class="card" onclick="toggleModal()">
+                            <div class="display-flex align-items-center justify-between">
+                                <span class="subtitle">Likes</span>
+                                <img src="img/icon-twitter.svg">
+                            </div>
+                            <div class="display-flex justify-between align-items-bottom mt-30">
+                                <div class="social-total-interaction">
+                                    507
+                                </div>
+                                <div class="indicator good">
+                                    <img src="img/icon-up.svg"> 553%
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Card social count -->
+                        <div class="card" onclick="toggleModal()">
+                            <div class="display-flex align-items-center justify-between">
+                                <span class="subtitle">Likes</span>
+                                <img src="img/icon-youtube.svg">
+                            </div>
+                            <div class="display-flex justify-between align-items-bottom mt-30">
+                                <div class="social-total-interaction">
+                                    107
+                                </div>
+                                <div class="indicator bad">
+                                    <img src="img/icon-down.svg"> 19%
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Card social count -->
+                        <div class="card" onclick="toggleModal()">
+                            <div class="display-flex align-items-center justify-between">
+                                <span class="subtitle">Total Views</span>
+                                <img src="img/icon-youtube.svg">
+                            </div>
+                            <div class="display-flex justify-between align-items-bottom mt-30">
+                                <div class="social-total-interaction">
+                                    107
+                                </div>
+                                <div class="indicator bad">
+                                    <img src="img/icon-down.svg"> 12%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal-wrapper">
+            <div class="modal">
+                <!-- Modal header -->
+                <div class="modal-header">
+
+                    <!-- Modal close icon -->
+                    <div class="modal-close" onclick="toggleModal()"></div>
+
+                    <!-- Modal header content -->
+                    <h1>Facebook followers</h1>
+                    <div class="social-user display-flex align-items-center">
+                        <img src="img/icon-facebook.svg"> <span class="subtitle">@nathanf</span>
+                    </div>
+                    <div class="display-flex">
+                        <div class="modal-social-interactions">
+                            <div class="social-total">
+                                1987
+                            </div>
+                            <div class="social-indicator">
+                                Total
+                                <br>
+                                followers
+                            </div>
+                        </div>
+                        <div class="modal-social-interactions">
+                            <div class="display-flex align-items-center">
+                                <img src="img/icon-up.svg">
+                                <div class="social-total text-color-green">
+                                    81
+                                </div>
+                            </div>
+                            <div class="social-indicator">
+                                New followers in
+                                <br>
+                                the past 10 days
+                            </div>
+                        </div>
+                        <div class="modal-social-interactions">
+                            <div class="display-flex align-items-center">
+                                <img src="img/icon-up.svg">
+                                <div class="social-total text-color-green">
+                                    12
+                                </div>
+                            </div>
+                            <div class="social-indicator">
+                                New followers
+                                <br>
+                                TODAY
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    May 4 - May 13
+
+                    <!-- Chart -->
+                    <div class="chart-container">
+                        <canvas id="followersChart"></canvas>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </body>
+</html>
